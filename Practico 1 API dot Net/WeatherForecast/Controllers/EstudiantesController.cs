@@ -12,14 +12,15 @@ public class EstudiantesController : ControllerBase{
 
 
     /*La lógica debería estar toda en una clase controlador*/
-
-    public ResultadoConsultaEstudiantes Get(){
+    [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ResultadoConsultaEstudiantes))]
+    public IActionResult Get(){
              
         ResultadoConsultaEstudiantes resultado = new ResultadoConsultaEstudiantes();
         resultado.page = 1;
         resultado.size = estudiantes.Count;
         resultado.estudiantes = estudiantes.Values;
-        return resultado;
+        return Ok(resultado);
     }
 
     [HttpGet]
