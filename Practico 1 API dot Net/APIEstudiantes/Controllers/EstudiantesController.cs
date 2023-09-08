@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace WeatherForecast.Controllers;
 
@@ -96,6 +97,9 @@ public class EstudiantesController : ControllerBase{
 
     [HttpPut]
     [Route("{id?}")]
+    /*[SwaggerOperation(
+        Summary = "Actualiza los datos de un estudiante",
+        Description = "Retorna los datos del estudiante en su estado previo a la modificación")]*/
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Estudiante))]
     [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ApiError))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ApiError))]

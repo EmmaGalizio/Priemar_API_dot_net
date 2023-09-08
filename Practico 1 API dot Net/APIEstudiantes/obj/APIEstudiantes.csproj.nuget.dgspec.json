@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\WeatherForecast\\WeatherForecast.csproj": {}
+    "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\APIEstudiantes\\APIEstudiantes.csproj": {}
   },
   "projects": {
-    "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\WeatherForecast\\WeatherForecast.csproj": {
+    "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\APIEstudiantes\\APIEstudiantes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\WeatherForecast\\WeatherForecast.csproj",
-        "projectName": "WeatherForecast",
-        "projectPath": "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\WeatherForecast\\WeatherForecast.csproj",
+        "projectUniqueName": "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\APIEstudiantes\\APIEstudiantes.csproj",
+        "projectName": "APIEstudiantes",
+        "projectPath": "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\APIEstudiantes\\APIEstudiantes.csproj",
         "packagesPath": "C:\\Users\\emmag\\.nuget\\packages\\",
-        "outputPath": "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\WeatherForecast\\obj\\",
+        "outputPath": "D:\\Repo IAEW 2023\\integracion_aplicaciones_web_5K3_2024\\Practico 1 API dot Net\\APIEstudiantes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\emmag\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,11 +42,15 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[7.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

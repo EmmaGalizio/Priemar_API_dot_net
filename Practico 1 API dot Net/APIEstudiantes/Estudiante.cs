@@ -24,7 +24,8 @@ public class Estudiante{
 
     }
 
-    private Boolean validate_email(string email) {
+    private Boolean validate_email(string email){
+
 
         string[] parts = email.Split("@");
         if (parts.Length != 2 || parts[0].Length > 200 || parts[1].Length > 55  || parts[0].Length == 0 || parts[1].Length == 0) {
