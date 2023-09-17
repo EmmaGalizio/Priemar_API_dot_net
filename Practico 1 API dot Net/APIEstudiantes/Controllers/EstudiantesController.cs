@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -14,6 +15,7 @@ public class EstudiantesController : ControllerBase{
 
     /*La lógica debería estar toda en una clase controlador*/
     [HttpGet]
+    [Authorize("read:estudiantes")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ResultadoConsultaEstudiantes))]
     public IActionResult Get(){
              
@@ -28,6 +30,7 @@ public class EstudiantesController : ControllerBase{
     [Route("{id?}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Estudiante))]
     [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ApiError))]
+    [Authorize("read:estudiantes")]
     public IActionResult Get(int id){
 
         if (!estudiantes.ContainsKey(id)){
@@ -43,6 +46,7 @@ public class EstudiantesController : ControllerBase{
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Estudiante))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ApiError))]
+    [Authorize("write:estudiantes")]
     public IActionResult Post(Estudiante estudiante) {        
 
         if (estudiante == null) {
@@ -80,6 +84,7 @@ public class EstudiantesController : ControllerBase{
     [Route("{id?}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Estudiante))]
     [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ApiError))]
+    [Authorize("write:estudiantes")]
     public IActionResult Delete(int id){
         
         if(!estudiantes.ContainsKey(id)){
@@ -103,6 +108,7 @@ public class EstudiantesController : ControllerBase{
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Estudiante))]
     [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ApiError))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ApiError))]
+    [Authorize("write:estudiantes")]
     public IActionResult Put(int id, Estudiante estudiante){
 
         if(!estudiantes.ContainsKey(id)){
